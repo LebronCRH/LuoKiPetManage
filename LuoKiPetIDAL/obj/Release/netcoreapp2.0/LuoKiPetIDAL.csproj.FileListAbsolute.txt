@@ -1,0 +1,12 @@
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\bin\Release\netcoreapp2.0\LuoKiPetIDAL.deps.json
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\bin\Release\netcoreapp2.0\LuoKiPetIDAL.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\bin\Release\netcoreapp2.0\LuoKiPetIDAL.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\bin\Release\netcoreapp2.0\Models.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\bin\Release\netcoreapp2.0\Models.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\obj\Release\netcoreapp2.0\LuoKiPetIDAL.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\obj\Release\netcoreapp2.0\LuoKiPetIDAL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\obj\Release\netcoreapp2.0\LuoKiPetIDAL.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\obj\Release\netcoreapp2.0\LuoKiPetIDAL.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\obj\Release\netcoreapp2.0\LuoKiPetIDAL.csproj.CopyComplete
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\obj\Release\netcoreapp2.0\LuoKiPetIDAL.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetIDAL\obj\Release\netcoreapp2.0\LuoKiPetIDAL.pdb

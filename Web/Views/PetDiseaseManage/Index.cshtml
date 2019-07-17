@@ -1,0 +1,597 @@
+﻿@{ 
+    Layout = null;
+}
+    <title>疾病管理</title>
+
+    <div class="layui-card layadmin-header">
+        <div class="layui-breadcrumb" lay-filter="breadcrumb">
+            <a lay-href="">主页</a>
+            <a><cite>疾病管理</cite></a>
+        </div>
+    </div>
+
+    <div class="layui-fluid ConH100" id="LAY-app-table">
+        <div class="layui-card layui-row layui-col-space15 ConH100" style="padding: 15px;">
+            <div class="orgbox layui-col-md2 ConH100">
+                <ul id="demo2"></ul>
+            </div>
+            <div class="site-tips layui-col-md10" id="demo2-view">
+                <div id="viewForm">
+
+                </div>
+                <div id="viewTable" class="ConH100">
+                    <div style="padding-bottom: 10px;">
+                        <button class="layui-btn layui-btn-normal BigEdit" data-type="add">
+                            <i class="layui-icon">&#xe654;</i>添加
+                        </button>
+                        <button class="layui-btn layui-btn-danger BigEdit" data-type="batchdel">
+                            <i class="layui-icon">&#xe640;</i>删除
+                        </button>
+                        <button class="layui-btn layui-btn-warm BigEdit" data-type="output">
+                            <i class="layui-icon">&#xe6a6;</i>导出
+                        </button>
+                        <button class="layui-btn layui-btn-normal BigEdit" data-type="addposition">
+                            <i class="layui-icon">&#xe654;</i>添加部位
+                        </button>
+                        <button class="layui-btn layui-btn-normal BigEdit" data-type="addsymptom">
+                            <i class="layui-icon">&#xe654;</i>添加症状
+                        </button>
+                    </div>
+                    <table id="LAY-mymenu-all" lay-filter="LAY-mymenu-all"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="formBoxMenu" type="text/html">
+        <div></div>
+        <form class="layui-form" action="" lay-filter="component-form-managemenu">
+            <div class="layui-form-item">
+                <div class="layui-col-lg6">
+                    <label class="layui-form-label">菜单名称：</label>
+                    <div class="layui-input-block">
+                        <input type="hidden" name="ManageMenuID" value="{{d.manageMenuID}}" />
+                        <input type="text" name="MenuName" id="MenuName" lay-verify="required" placeholder="" autocomplete="off" class="layui-input" value="{{d.menuName}}">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row layui-col-space10 layui-form-item">
+                <label class="layui-form-label">菜单图标：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="MenuIcon" id="MenuIcon" lay-verify="required" placeholder="" autocomplete="off" class="layui-input" value="{{d.menuIcon}}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">数据名称：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="DataName" placeholder="" autocomplete="off" class="layui-input" value="{{d.dataName}}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">是否禁用：</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="marriage" lay-skin="switch" lay-text="是|否">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="component-form-managemenu">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </script>
+
+    <script id="formBox" type="text/html">
+        <div></div>
+        <form class="layui-form" action="" lay-filter="component-form-element">
+            <div class="layui-form-item">
+                <div class="layui-col-lg6">
+                    <label class="layui-form-label">节点名称：</label>
+                    <div class="layui-input-block">
+                        <input type="hidden" name="ManagerMenuChildID" value="{{d.managerMenuChildID}}" />
+                        <input type="text" name="MenuChildName" id="MenuChildName" lay-verify="required" placeholder="" autocomplete="off" class="layui-input" value="{{d.menuChildName}}">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row layui-col-space10 layui-form-item">
+                <label class="layui-form-label">链接地址：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="MenuChildHref" lay-verify="required" placeholder="" autocomplete="off" class="layui-input" value="{{d.menuChildHref}}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">父级菜单：</label>
+                <div class="layui-input-block menuchildforid">
+                    @*<select name="ForMenuID" lay-verify="required" lay-filter="aihao">
+                        @foreach (var item in Model)
+                        {
+                            <option value="@item.ManageMenuID">@item.MenuName</option>
+                        }
+                    </select>*@
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">数据名称：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="DataName" placeholder="" autocomplete="off" class="layui-input" value="{{d.dataName}}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">是否禁用：</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="marriage" lay-skin="switch" lay-text="是|否">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="component-form-element">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </script>
+
+    <style>
+        .orgbox {
+            display: inline-block;
+            height: 510px;
+            border: 1px solid #ddd;
+            overflow: auto;
+        }
+
+        .site-tips {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .ConH100 {
+            height:95%;
+        }
+    </style>
+    <script>
+    layui.use(['tree','layer','table','form','laytpl'], function(){
+        var $ = layui.$
+            ,layer = layui.layer
+            ,admin = layui.admin
+            ,table = layui.table
+            ,element = layui.element
+            , form = layui.form
+            ,view = layui.view
+            , laytpl = layui.laytpl;
+        var formview = $("#viewForm");
+        var tableview = $("#viewTable");
+        var menuchildaddindex;
+        var tplStatus = function (d) {
+                return '<input type="checkbox" name="status" lay-skin="switch" lay-text="正常|禁用" checked="false">';
+        };
+        var tplOperate = function (d) {
+            return '<div class="opetate">' +
+                '<button class="layui-btn layui-btn-xs"  lay-event="edit">编辑</button>' +
+                '<button class="layui-btn layui-btn-danger layui-btn-xs"  lay-event="del">删除</button>' +
+                '</div>';
+        };
+        var active = {
+            batchdel: function () {
+                var checkStatus = table.checkStatus('LAY-mymenu-all')
+                    , checkData = checkStatus.data; //得到选中的数据
+                console.log(checkData);
+                if (checkData.length === 0) {
+                    return layer.msg('请选择数据');
+                }
+                layer.prompt({
+                    formType: 1
+                    , title: '敏感操作，请验证口令'
+                }, function (value, index) {
+                    if (value === "123456") {
+                        layer.close(index);
+                        layer.confirm('确定删除吗？', function (index) {
+                            var deletelist = [];
+                            checkData.forEach((item) => {
+                                deletelist.push(item.child);
+                            });
+                            $.ajax({
+                                url: 'ManageMenu/DeleteMenuChildList',
+                                //contentType: 'application/json',
+                                type: "post",
+                                data: { childlist: deletelist },
+                                success: function (e) {
+                                    if (e === true) {
+                                        layer.msg("批量删除成功", { icon: 6 });
+                                        layer.close(menuchildaddindex);
+                                        table.reload('LAY-mymenu-all');
+                                    } else {
+                                        layer.msg('批量删除失败', { icon: 5 });
+                                    }
+                                },
+                                error: function (e) {
+                                    layer.msg('批量删除异常', { icon: 2 });
+                                }
+                            });
+                        });
+                    } else {
+                        layer.msg('口令错误', { icon: 2 });
+                    }
+                });
+            }
+            ,getCheckData: function () { //获取选中数据
+                var checkStatus = table.checkStatus('LAY-myClient-all')
+                    , data = checkStatus.data;
+                active.getId(data)
+
+                layer.alert(JSON.stringify(data));
+            }
+            , getId: function (data) {
+                var idArr = [];
+                for (var i = 0; i < data.length; i++) {
+                    console.log(data[i].id)
+                    idArr.push(data[i].id)
+                }
+                console.log(idArr)
+            }
+            , getCheckLength: function () { //获取选中数目
+                var checkStatus = table.checkStatus('LAY-myClient-all')
+                    , data = checkStatus.data;
+                layer.msg('选中了：' + data.length + ' 个');
+            }
+            , isAll: function () { //验证是否全选
+                var checkStatus = table.checkStatus('LAY-myClient-all');
+                layer.msg(checkStatus.isAll ? '全选' : '未全选');
+            }
+            , add: function () { // 增加一条列表
+                $.ajax({//编辑页面为局部页面
+                    url: 'PetDiseaseManage/AddPetDisease',
+                    type: "get",
+                    success: function (e) {
+                        e = "<div>" + e + "</div>";
+                        menuchildaddindex = layer.open({
+                            title: '添加疾病',
+                            type: 1,
+                            shadeClose: false,
+                            area: admin.screen() < 2 ? ['80%', '300px'] : ['1100px', '700px'],
+                            content: e
+                        });
+                        form.render(null, 'component-form-addmenuchild');
+                    }
+                });
+            }
+            , addposition: function () { // 增加一条列表
+                $.ajax({//编辑页面为局部页面
+                    url: 'PetDiseaseManage/AddPetPosition',
+                    type: "get",
+                    success: function (e) {
+                        e = "<div>" + e + "</div>";
+                        menuchildaddindex = layer.open({
+                            title: '添加部位',
+                            type: 1,
+                            shadeClose: false,
+                            area: admin.screen() < 2 ? ['80%', '300px'] : ['700px', '300px'],
+                            content: e
+                        });
+                        form.render(null, 'component-form-addmenuchild');
+                    }
+                });
+            }
+            , addsymptom: function () { // 增加一条列表
+                $.ajax({//编辑页面为局部页面
+                    url: 'PetDiseaseManage/Addsymptom',
+                    type: "get",
+                    success: function (e) {
+                        e = "<div>" + e + "</div>";
+                        menuchildaddindex = layer.open({
+                            title: '添加症状',
+                            type: 1,
+                            shadeClose: false,
+                            area: admin.screen() < 2 ? ['80%', '300px'] : ['750px', '400px'],
+                            content: e
+                        });
+                    }
+                });
+            }
+        };
+        $.ajax({
+            url: 'PetDiseaseManage/GetPetDiseaseTree',
+            type: "get",
+            success: function (e) {
+                layui.tree({
+                    elem: '#demo2' //指定元素
+                    , target: '_blank' //是否新选项卡打开（比如节点返回href才有效）
+                    , click: function (item) { //点击节点回调
+                        var data = item;
+                        if (data.jibie === 2) {
+                            tableview.show();
+                            formview.hide();
+                            table.render({
+                                elem: '#LAY-mymenu-all'
+                                , url: '/PetDiseaseManage/GetSerachPetDiseaseTable' //模拟接口
+                                , where: { petcategoryid: data.forparentid, positionid: data.id }
+                                , cellMinWidth: 60 //全局定义常规单元格的最小宽度
+                                , limit: 15
+                                , page: true // 开启分页
+                                , cols: [[ // 表头
+                                    { type: 'checkbox' }
+                                    // , {type: 'numbers', title: '#'}
+                                    , { field: 'diseaseName', title: '疾病名称', edit: 'text', templet: '<div>{{d.diseaseName}}</div>' }
+                                    , { field: 'diseaseId', title: '疾病ID', edit: 'text', templet: '<div>{{d.diseaseId}}</div>' }
+                                    , { field: 'genera', title: '疾病科属', edit: 'text', templet: '<div>{{d.genera}}</div>' }
+                                    , { field: 'symptom', title: '疾病症状', edit: 'text', templet: '<div>{{d.symptom}}</div>' }
+                                    , { field: 'summary', title: '疾病概述', edit: 'text', templet: '<div>{{d.summary}}</div>' }
+                                    , { field: 'diseaseCause', title: '发病原因', edit: 'text', templet: '<div>{{d.diseaseCause}}</div>' }
+                                    , { field: 'mainSymptom', title: '主要症状', edit: 'text', templet: '<div>{{d.mainSymptom}}</div>' }
+                                    , { field: 'zdbz', title: '诊断标准', templet: '<div>{{d.zdbz}}</div>' }
+                                    , { field: 'treatment', title: '治疗方法', templet: '<div>{{d.treatment}}</div>' }
+                                    , { field: 'operate', title: '操作', templet: tplOperate, width: 180, align: 'center' }
+                                ]]
+                                , skin: 'line'
+                                , done: function (res, curr, count) {
+                                    console.log(res);
+                                    console.log(curr);
+
+                                    //得到数据总量
+                                    console.log(count);
+                                }
+                            });
+                        }
+                        else if (data.jibie === 1) {
+                            tableview.show();
+                            formview.hide();
+                            table.render({
+                                elem: '#LAY-mymenu-all'
+                                , url: '/PetDiseaseManage/GetSerachPetDiseaseTable' //模拟接口
+                                , where: { petcategoryid: data.id }
+                                , cellMinWidth: 60 //全局定义常规单元格的最小宽度
+                                , limit: 15
+                                , page: true // 开启分页
+                                , cols: [[ // 表头
+                                    { type: 'checkbox' }
+                                    // , {type: 'numbers', title: '#'}
+                                    , { field: 'diseaseName', title: '疾病名称', edit: 'text', templet: '<div>{{d.diseaseName}}</div>' }
+                                    , { field: 'diseaseId', title: '疾病ID', edit: 'text', templet: '<div>{{d.diseaseId}}</div>' }
+                                    , { field: 'genera', title: '疾病科属', edit: 'text', templet: '<div>{{d.genera}}</div>' }
+                                    , { field: 'symptom', title: '疾病症状', edit: 'text', templet: '<div>{{d.symptom}}</div>' }
+                                    , { field: 'summary', title: '疾病概述', edit: 'text', templet: '<div>{{d.summary}}</div>' }
+                                    , { field: 'diseaseCause', title: '发病原因', edit: 'text', templet: '<div>{{d.diseaseCause}}</div>' }
+                                    , { field: 'mainSymptom', title: '主要症状', edit: 'text', templet: '<div>{{d.mainSymptom}}</div>' }
+                                    , { field: 'zdbz', title: '诊断标准', templet: '<div>{{d.zdbz}}</div>' }
+                                    , { field: 'treatment', title: '治疗方法', templet: '<div>{{d.treatment}}</div>' }
+                                    , { field: 'operate', title: '操作', templet: tplOperate, width: 180, align: 'center' }
+                                ]]
+                                , skin: 'line'
+                                , done: function (res, curr, count) {
+                                    console.log(res);
+                                    console.log(curr);
+
+                                    //得到数据总量
+                                    console.log(count);
+                                }
+                            });
+                        }
+                        else if (data.jibie === 0) {
+                            tableview.show();
+                            formview.hide();
+                            table.render({
+                                elem: '#LAY-mymenu-all'
+                                , url: '/PetDiseaseManage/GetAllPetDiseaseTable' //模拟接口
+                                , cellMinWidth: 60 //全局定义常规单元格的最小宽度
+                                , limit: 15
+                                , page: true // 开启分页
+                                , cols: [[ // 表头
+                                    { type: 'checkbox' }
+                                    // , {type: 'numbers', title: '#'}
+                                    , { field: 'diseaseName', title: '疾病名称', edit: 'text', templet: '<div>{{d.diseaseName}}</div>' }
+                                    , { field: 'diseaseId', title: '疾病ID', edit: 'text', templet: '<div>{{d.diseaseId}}</div>' }
+                                    , { field: 'genera', title: '疾病科属', edit: 'text', templet: '<div>{{d.genera}}</div>' }
+                                    , { field: 'symptom', title: '疾病症状', edit: 'text', templet: '<div>{{d.symptom}}</div>' }
+                                    , { field: 'summary', title: '疾病概述', edit: 'text', templet: '<div>{{d.summary}}</div>' }
+                                    , { field: 'diseaseCause', title: '发病原因', edit: 'text', templet: '<div>{{d.diseaseCause}}</div>' }
+                                    , { field: 'mainSymptom', title: '主要症状', edit: 'text', templet: '<div>{{d.mainSymptom}}</div>' }
+                                    , { field: 'zdbz', title: '诊断标准', templet: '<div>{{d.zdbz}}</div>' }
+                                    , { field: 'treatment', title: '治疗方法', templet: '<div>{{d.treatment}}</div>' }
+                                    , { field: 'operate', title: '操作', templet: tplOperate, width: 180, align: 'center' }
+                                ]]
+                                , skin: 'line'
+                                , done: function (res, curr, count) {
+                                    console.log(res);
+                                    console.log(curr);
+
+                                    //得到数据总量
+                                    console.log(count);
+                                }
+                            });
+                        }
+                        else if (data.jibie === 3) {
+                            tableview.show();
+                            formview.hide();
+                            table.render({
+                                elem: '#LAY-mymenu-all'
+                                , url: '/PetDiseaseManage/GetSerachPetDiseaseTable' //模拟接口
+                                , where: { petcategoryid: data.dataname, positionid: data.forparentid, symptomid: data.id }
+                                , cellMinWidth: 60 //全局定义常规单元格的最小宽度
+                                , page: true // 开启分页
+                                , cols: [[ // 表头
+                                    { type: 'checkbox' }
+                                    // , {type: 'numbers', title: '#'}
+                                    , { field: 'diseaseName', title: '疾病名称', edit: 'text', templet: '<div>{{d.diseaseName}}</div>' }
+                                    , { field: 'diseaseId', title: '疾病ID', edit: 'text', templet: '<div>{{d.diseaseId}}</div>' }
+                                    , { field: 'genera', title: '疾病科属', edit: 'text', templet: '<div>{{d.genera}}</div>' }
+                                    , { field: 'symptom', title: '疾病症状', edit: 'text', templet: '<div>{{d.symptom}}</div>' }
+                                    , { field: 'summary', title: '疾病概述', edit: 'text', templet: '<div>{{d.summary}}</div>' }
+                                    , { field: 'diseaseCause', title: '发病原因', edit: 'text', templet: '<div>{{d.diseaseCause}}</div>' }
+                                    , { field: 'mainSymptom', title: '主要症状', edit: 'text', templet: '<div>{{d.mainSymptom}}</div>' }
+                                    , { field: 'zdbz', title: '诊断标准', templet: '<div>{{d.zdbz}}</div>' }
+                                    , { field: 'treatment', title: '治疗方法', templet: '<div>{{d.treatment}}</div>' }
+                                    , { field: 'operate', title: '操作', templet: tplOperate, width: 180, align: 'center' }
+                                ]]
+                                , skin: 'line'
+                                , done: function (res, curr, count) {
+                                    console.log(res);
+                                    console.log(curr);
+
+                                    //得到数据总量
+                                    console.log(count);
+                                }
+                            });
+                        }
+                        else if (data.jibie === 4) {
+                            $.ajax({//编辑页面为局部页面
+                                url: 'PetDiseaseManage/EditPetDisease?id=' + data.id,
+                                type: "get",
+                                success: function (e) {
+                                    e = "<div>" + e + "</div>";
+                                    var menuchildeditindex = layer.open({
+                                        title: '疾病编辑',
+                                        type: 1,
+                                        shadeClose: false,
+                                        area: admin.screen() < 2 ? ['80%', '300px'] : ['1100px', '700px'],
+                                        content: e
+                                    });
+                                }
+                            });
+                        }
+                    }
+                    , nodes: e.tree
+                });
+            },
+            error: function (e) {
+                return layer.msg("请求数据出现异常");
+            }
+        });
+        //节点数据表格渲染
+        table.render({
+            elem: '#LAY-mymenu-all'
+            , url: '/PetDiseaseManage/GetAllPetDiseaseTable' //模拟接口
+            , cellMinWidth: 60 //全局定义常规单元格的最小宽度
+            , limit:15
+            , page: true // 开启分页
+            , cols: [[ // 表头
+                { type: 'checkbox' }
+                // , {type: 'numbers', title: '#'}
+                , { field: 'diseaseName', title: '疾病名称', edit: 'text', templet: '<div>{{d.diseaseName}}</div>'}
+                , { field: 'diseaseId', title: '疾病ID', edit: 'text', templet: '<div>{{d.diseaseId}}</div>'}
+                , { field: 'genera', title: '疾病科属', edit: 'text', templet: '<div>{{d.genera}}</div>'}
+                , { field: 'symptom', title: '疾病症状', edit: 'text', templet: '<div>{{d.symptom}}</div>'}
+                , { field: 'summary', title: '疾病概述', edit: 'text', templet: '<div>{{d.summary}}</div>'}
+                , { field: 'diseaseCause', title: '发病原因', edit: 'text', templet: '<div>{{d.diseaseCause}}</div>'}
+                , { field: 'mainSymptom', title: '主要症状', edit: 'text', templet: '<div>{{d.mainSymptom}}</div>'}
+                , { field: 'zdbz', title: '诊断标准', templet: '<div>{{d.zdbz}}</div>' }
+                , { field: 'treatment', title: '治疗方法', templet: '<div>{{d.treatment}}</div>' }
+                , { field: 'operate', title: '操作', templet: tplOperate, width: 180, align: 'center' }
+            ]]
+            , skin: 'line'
+            , done: function (res, curr, count) {
+                console.log(res);
+                console.log(curr);
+
+                //得到数据总量
+                console.log(count);
+            }
+        });
+        $('.BigEdit').on('click', function () {//添加 删除 导出按钮事件
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+        //单行列的数据操作
+        table.on('tool(LAY-mymenu-all)', function (obj) {
+            var layEvent = obj.event,
+                data = obj.data;
+            console.log(data);
+            if (layEvent === 'edit') { //编辑
+                $.ajax({//编辑页面为局部页面
+                    url: 'PetDiseaseManage/EditPetDisease?id=' + data.diseaseId,
+                    type: "get",
+                    success: function (e) {
+                        e = "<div>" + e + "</div>";
+                        var menuchildeditindex = layer.open({
+                            title: '疾病编辑',
+                            type: 1,
+                            shadeClose: false,
+                            area: admin.screen() < 2 ? ['80%', '300px'] : ['1100px', '700px'],
+                            content: e
+                        });
+                     }
+                 });
+            } else if (layEvent === 'del') { //删除
+                layer.confirm('确定这个节点吗？', { icon: 3, title: '提示信息' }, function (index) {
+                    $.ajax({
+                        url: 'ManageMenu/DeleteMenuChildItem',
+                        //contentType: 'application/json',
+                        type: "post",
+                        data: { childitem: data.child },
+                        success: function (e) {
+                            if (e === true) {
+                                layer.msg(data.child.menuChildName+"节点删除成功", { icon: 6 });
+                                layer.close(menuchildaddindex);
+                                table.reload('LAY-mymenu-all');
+                            } else {
+                                layer.msg(data.child.menuChildName +'节点删除失败', { icon: 5 });
+                            }
+                        },
+                        error: function (e) {
+                            layer.msg(data.child.menuChildName +'节点删除异常', { icon: 2 });
+                        }
+                    });
+                    layer.msg("删除成功");
+                });
+            };
+        });
+        //节点编辑表单提交逻辑事件
+        form.on('submit(component-form-element)', function(data){
+            //layer.msg(JSON.stringify(data.field));
+            $.ajax({
+                url: 'ManageMenu/UpdataMenuChild',
+                type: "post",
+                data: data.field,
+                success: function (e) {
+                    if (e === 1) {
+                        layer.msg("更新成功",{ icon: 6 });
+                    } else {
+                        layer.msg('更新失败', { icon: 5 });
+                    }
+                },
+                error: function (e) {
+                    layer.msg('更新失败', { icon: 2 });
+                }
+            });
+            return false;
+        });
+        //菜单编辑表单提交逻辑事件
+        form.on('submit(component-form-managemenu)', function (data) {
+            $.ajax({
+                url: 'ManageMenu/UpdataMenu',
+                type: "post",
+                data: data.field,
+                success: function (e) {
+                    if (e === 1) {
+                        layer.msg("更新成功", { icon: 6 });
+                    } else {
+                        layer.msg('更新失败', { icon: 5 });
+                    }
+                },
+                error: function (e) {
+                    layer.msg('更新失败', { icon: 2 });
+                }
+            });
+            return false;
+        });
+        //节点添加表单提交逻辑事件
+        form.on('submit(component-form-addmenuchild)', function (data) {
+            $.ajax({
+                url: 'ManageMenu/AddMenuChild',
+                type: "post",
+                data: data.field,
+                success: function (e) {
+                    if (e === 1) {
+                        layer.msg("更新成功", { icon: 6 });
+                        layer.close(menuchildaddindex);
+                    } else {
+                        layer.msg('更新失败', { icon: 5 });
+                    }
+                },
+                error: function (e) {
+                    layer.msg('更新失败', { icon: 2 });
+                }
+            });
+            return false;
+        });
+    });
+    </script>
+

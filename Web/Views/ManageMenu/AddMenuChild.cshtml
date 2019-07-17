@@ -1,0 +1,68 @@
+﻿@model Web.Models.ViewModels.EditMenuChildViewModel
+@{
+    ViewData["Title"] = "EditMenuChild";
+    Layout = null;
+}
+<div style="padding:15px;">
+    <form class="layui-form" lay-filter="component-form-addmenuchild">
+        <div class="layui-form-item">
+            <div class="layui-col-lg6">
+                <label class="layui-form-label">节点名称：</label>
+                <div class="layui-input-block">
+                    <input type="hidden" name="ManagerMenuChildID" />
+                    <input type="text" name="MenuChildName" id="MenuChildName" placeholder="请输入节点名称" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space10 layui-form-item">
+            <label class="layui-form-label">链接地址：</label>
+            <div class="layui-input-block">
+                <input type="text" name="MenuChildHref" lay-verify="required" placeholder="请输入链接地址" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">父级菜单：</label>
+            <div class="layui-input-block menuchildforid">
+                <select name="ForMenuID" lay-verify="required" lay-filter="aihao">
+                    <option value=""></option>
+                    @foreach (var item in Model.menulist)
+                    {
+                        <option value="@item.ManageMenuID">@item.MenuName</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">数据名称：</label>
+            <div class="layui-input-block">
+                <input type="text" name="DataName" placeholder="请输入数据名称" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">是否禁用：</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="marriage" lay-skin="switch" lay-text="是|否">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="component-form-addmenuchild">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script>
+    layui.use(['tree', 'layer', 'table', 'form', 'laytpl'], function () {
+        var $ = layui.$
+            , layer = layui.layer
+            , admin = layui.admin
+            , table = layui.table
+            , element = layui.element
+            , form = layui.form
+            , laytpl = layui.laytpl;
+    });
+</script>
+

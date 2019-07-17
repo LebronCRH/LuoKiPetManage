@@ -1,0 +1,40 @@
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetFactory.deps.json
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetFactory.dll
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetFactory.pdb
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetBLL.dll
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetDAL.dll
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetIBLL.dll
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetIDAL.dll
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\Models.dll
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\Models.pdb
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetBLL.pdb
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetDAL.pdb
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetIBLL.pdb
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetIDAL.pdb
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.csprojResolveAssemblyReference.cache
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.csproj.CoreCompileInputs.cache
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.AssemblyInfoInputs.cache
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.AssemblyInfo.cs
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.csproj.CopyComplete
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.dll
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetFactory.deps.json
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetFactory.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetFactory.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetBLL.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetDAL.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetIBLL.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetIDAL.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\Models.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\Models.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetBLL.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetDAL.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetIBLL.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\bin\Debug\netcoreapp2.0\LuoKiPetIDAL.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.csproj.CopyComplete
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\LuoKiPetFactory\obj\Debug\netcoreapp2.0\LuoKiPetFactory.pdb

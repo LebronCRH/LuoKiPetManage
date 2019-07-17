@@ -1,0 +1,22 @@
+﻿@model Web.Models.ViewModels.ManageMenuViewModel;
+
+@foreach (var item in Model.menutrees)
+{
+    <li data-name="@item.menu.DataName" data-jump="" class="layui-nav-item @(item.menu.MenuName=="主页"?"layui-nav-itemed":"") ">
+        <a href="javascript:;" lay-tips="@item.menu.MenuName" lay-direction="2">
+            <i class="layui-icon @item.menu.MenuIcon"></i>
+            <cite>@item.menu.MenuName</cite>
+            <span class="layui-nav-more"></span>
+        </a>
+        <dl class="layui-nav-child">
+            @foreach (var chiditem in item.menuchilds)
+            {
+                <dd data-name="@chiditem.DataName" data-jump="@chiditem.MenuChildHref" class="@(chiditem.MenuChildName=="控制台"?"layui-this":"") ">
+                    <a href="javascript:;" lay-href="@chiditem.MenuChildHref">@chiditem.MenuChildName</a>
+                </dd>
+            }
+        </dl>
+    </li>
+}
+
+

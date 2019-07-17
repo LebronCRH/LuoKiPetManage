@@ -1,0 +1,18 @@
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\Common\bin\Debug\netcoreapp2.0\Common.deps.json
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\Common\bin\Debug\netcoreapp2.0\Common.dll
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.csprojResolveAssemblyReference.cache
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.csproj.CoreCompileInputs.cache
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.AssemblyInfoInputs.cache
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.AssemblyInfo.cs
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\Common\bin\Debug\netcoreapp2.0\Common.pdb
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.dll
+D:\我的.NET项目\NET Core Test\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\bin\Debug\netcoreapp2.0\Common.deps.json
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\bin\Debug\netcoreapp2.0\Common.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\bin\Debug\netcoreapp2.0\Common.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Debug\netcoreapp2.0\Common.pdb

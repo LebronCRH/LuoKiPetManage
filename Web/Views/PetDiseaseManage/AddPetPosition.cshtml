@@ -1,0 +1,84 @@
+﻿@model Models.LuoKiPetModels.PetPosition
+@{
+    ViewData["Title"] = "AddPetPosition";
+    Layout = null;
+}
+
+<div style="padding:15px;">
+    <form class="layui-form" lay-filter="petposition-form-add">
+        <div class="layui-form-item">
+            <div class="layui-col-lg6">
+                <label class="layui-form-label">部位名称：</label>
+                <div class="layui-input-block">
+                    @Html.EditorFor(model => model.PetPositionName, new { htmlAttributes = new { placeholder = "请输入部位名称", @class = "layui-input", @lay_verify = "required" } })
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-col-lg6">
+                <label class="layui-form-label">宠物种类：</label>
+                <div class="layui-input-block">
+                    <select name="ForPetCategoryId" id="ForPetCategoryId" lay-verify="required">
+                        <option value="">请选择宠物种类</option>
+                        <option value="1">狗类</option>
+                        <option value="2">猫类</option>
+                        <option value="3">兔类</option>
+                        <option value="4">鼠类</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="petposition-form-add">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script>
+    layui.use(['layer', 'form', 'laydate', 'upload', 'cityselect'], function () {
+        var $ = layui.$
+            , layer = layui.layer
+            , index = parent.layer.getFrameIndex(window.name) //获取窗口索引
+            , element = layui.element
+            , laydate = layui.laydate
+            , upload = layui.upload
+            , cityselect = layui.cityselect
+            , form = layui.form;
+
+
+        form.render(null, 'petposition-form-add');
+        laydate.render({
+            elem: '#LAY-informationAdd-modifyTime'
+        });
+
+        form.on('submit(petposition-form-add)', function (data) {
+            $.ajax({
+                url: 'PetDiseaseManage/AddPetPosition',
+                type: "post",
+                data: data.field,
+                success: function (e) {
+                    if (e === 1) {
+                        layer.msg("添加成功", { icon: 6 });
+                        layer.close(menuchildaddindex);
+                    } else {
+                        layer.msg('添加失败', { icon: 5 });
+                    }
+                },
+                error: function (e) {
+                    layer.msg('添加失败', { icon: 2 });
+                }
+            });
+            return false;
+        });
+
+        $('.layui-btn-container .layui-btn').on('click', function () {
+            var othis = $(this)
+                , type = othis.data('type');
+            active[type] && active[type].call(this);
+        });
+    });
+</script>

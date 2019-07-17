@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\bin\Release\netcoreapp2.0\Common.deps.json
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\bin\Release\netcoreapp2.0\Common.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\bin\Release\netcoreapp2.0\Common.pdb
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Release\netcoreapp2.0\Common.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Release\netcoreapp2.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Release\netcoreapp2.0\Common.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Release\netcoreapp2.0\Common.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Release\netcoreapp2.0\Common.dll
+C:\Users\Administrator\Desktop\NET Core学习\NetCoreEF7Test\Common\obj\Release\netcoreapp2.0\Common.pdb

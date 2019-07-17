@@ -1,0 +1,98 @@
+﻿@model Models.LuoKiPetModels.PetPositionSymptom
+@{
+    ViewData["Title"] = "AddPetPositionSymptom";
+    Layout = null;
+}
+
+<div style="padding:15px;">
+    <form class="layui-form" lay-filter="disease-form-add">
+        <div class="layui-form-item">
+            <div class="layui-col-lg6">
+                <label class="layui-form-label">症状名称：</label>
+                <div class="layui-input-block">
+                    @Html.EditorFor(model => model.SymptomName, new { htmlAttributes = new { placeholder = "请输入症状名称", @class = "layui-input", @lay_verify = "required" } })
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">宠物种类：</label>
+                <div class="layui-input-block menuchildforid">
+                    <select name="ForPetCaegoryId" id="ForPetCaegoryId" lay-verify="required" lay-filter="ForPetCaegoryId"></select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">所属部位：</label>
+                <div class="layui-input-block menuchildforid">
+                    <select name="ForPetPositionId" id="ForPetPositionId" lay-verify="required" lay-filter="ForPetPositionId"></select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">症状概述：</label>
+            <div class="layui-input-block">
+                @Html.TextAreaFor(m => m.Describe, new { placeholder = "请输入症状概述", @class = "layui-textarea", @lay_verify = "required" })
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="disease-form-add">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script>
+    layui.use(['layer', 'form', 'laydate', 'upload', 'cityselect'], function () {
+        var $ = layui.$
+            , layer = layui.layer
+            , index = parent.layer.getFrameIndex(window.name) //获取窗口索引
+            , element = layui.element
+            , laydate = layui.laydate
+            , upload = layui.upload
+            , cityselect = layui.cityselect
+            , form = layui.form;
+        setTimeout(function () {
+                cityselect.render({
+                    elem: ["#ForPetCaegoryId", "#ForPetPositionId"],
+                    elembox: 'disease-form-add',
+                    url: 'PetDiseaseManage/GetPetDiseaseSelect',
+                    Tips: ["请选择种类", "请选择部位"]
+                });
+        }, 600);
+
+
+        form.render(null, 'disease-form-add');
+        laydate.render({
+            elem: '#LAY-informationAdd-modifyTime'
+        });
+
+        form.on('submit(disease-form-add)', function (data) {
+            $.ajax({
+                url: 'PetDiseaseManage/AddPositionSymptom',
+                type: "post",
+                data: data.field,
+                success: function (e) {
+                    if (e === 1) {
+                        layer.msg("添加成功", { icon: 6 });
+                        layer.close(menuchildaddindex);
+                    } else {
+                        layer.msg('添加失败', { icon: 5 });
+                    }
+                },
+                error: function (e) {
+                    layer.msg('添加失败', { icon: 2 });
+                }
+            });
+            return false;
+        });
+
+        $('.layui-btn-container .layui-btn').on('click', function () {
+            var othis = $(this)
+                , type = othis.data('type');
+            active[type] && active[type].call(this);
+        });
+    });
+</script>
